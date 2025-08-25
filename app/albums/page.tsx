@@ -210,11 +210,14 @@ const Page = () => {
     },
   ];
   return (
-    <div className="p-4 flex flex-col gap-5">
-      <div className="flex flex-col lg:flex-row justify-between gap-8">
+    <div className=" flex flex-col gap-5 flex-center">
+      <div className="flex flex-col lg:flex-row justify-between gap-8 m-2">
         {/* Video Section */}
         {showVideo && (
-          <div className="order-first lg:order-last max-w-[800px] max-h-[450px] md:w-1/2 aspect-video flex items-center">
+          <div className="order-first lg:order-last max-w-[800px] max-h-[450px] md:w-1/2 aspect-video flex flex-col items-center">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center text-gray-900 dark:text-gray-100">
+              Music Video
+            </h1>
             <iframe
               width="100%"
               height="100%"
@@ -231,12 +234,15 @@ const Page = () => {
         )}
 
         {/* Track List */}
-        <div className="flex flex-col flex-1 gap-8">
+        <div className="flex flex-col flex-1 gap-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 dark:text-gray-100">
+            Track List
+          </h1>
           <div>
-            <h2 className="text-xl font-semibold">Sanyii Mootii Track List</h2>
-            <Separator className="bg-red-600 h-1 my-2" />
+            <h2 className="text-xl font-semibold">Sanyii Mootii</h2>
+            <Separator className="bg-gray-600 h-1 my-2" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3">
               {tracks.map((track, index) => (
                 <TrackItem
                   key={index}
@@ -252,12 +258,10 @@ const Page = () => {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Track List */}
             <div className="flex flex-col flex-1">
-              <h2 className="text-xl font-semibold">
-                Waa&apos;ee Keenya Track List
-              </h2>
-              <Separator className="bg-red-600 h-1 my-2" />
+              <h2 className="text-xl font-semibold">Waa&apos;ee Keenya</h2>
+              <Separator className="bg-gray-600 h-1 my-2" />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
                 {tracks2.map((track, index) => (
                   <TrackItem
                     key={index}
@@ -273,12 +277,10 @@ const Page = () => {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Track List */}
             <div className="flex flex-col flex-1">
-              <h2 className="text-xl font-semibold">
-                Maal Mallisaa Track List
-              </h2>
-              <Separator className="bg-red-600 h-1 my-2" />
+              <h2 className="text-xl font-semibold">Maal Mallisaa</h2>
+              <Separator className="bg-gray-600 h-1 my-2" />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-3">
                 {tracks3.map((track, index) => (
                   <TrackItem
                     key={index}
