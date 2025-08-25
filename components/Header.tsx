@@ -2,9 +2,10 @@
 import * as React from "react";
 import { FaSpotify } from "react-icons/fa";
 import { Button } from "@/components/ui/button"; // shadcn button
-import { FaYoutube } from "react-icons/fa6";
+import { FaFacebook, FaYoutube } from "react-icons/fa6";
 import { MdPublic } from "react-icons/md";
 import Link from "next/link";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   const [mounted, setMounted] = React.useState(false);
@@ -71,9 +72,9 @@ export default function Header() {
               Albums
             </Button>
           </Link>
-          <Link href="/fansection">
+          <Link href="/fanssection">
             <Button variant="link" className="text-inherit">
-              Fan Section
+              Fans Section
             </Button>
           </Link>
           <Link href="/socials">
@@ -86,15 +87,27 @@ export default function Header() {
 
       {/* Right - Social Icons */}
       <div className="flex flex-row gap-2 xl:gap-6">
-        <Button variant="link" className="p-1 hover:text-red-600">
-          <FaYoutube />
-        </Button>
-        <Button variant="link" className="p-1 hover:text-blue-600">
-          <MdPublic />
-        </Button>
-        <Button variant="link" className="p-1 hover:text-green-600">
-          <FaSpotify className="text-2xl" />
-        </Button>
+        <Link href="https://www.youtube.com/@HachaluHundessaa">
+          <Button variant="link" className="p-1 hover:text-red-600">
+            <FaYoutube />
+          </Button>
+        </Link>
+        <Link href="https://hachaluhundessaaward.org/">
+          <Button variant="link" className="p-1 hover:text-blue-600">
+            <MdPublic />
+          </Button>
+        </Link>
+        <Link href="https://web.facebook.com/hachaluhundessaofficial">
+          <Button variant="link" className="p-1 hover:text-blue-600">
+            <FaFacebook />
+          </Button>
+        </Link>
+        <Link href="https://open.spotify.com/artist/1mIFOiMXZXNcpi2E651Rwx">
+          <Button variant="link" className="p-1 hover:text-green-600">
+            <FaSpotify className="text-2xl" />
+          </Button>
+        </Link>
+        <ModeToggle />
       </div>
     </div>
   );
