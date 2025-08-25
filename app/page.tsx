@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <div
       id="home-section"
-      className="max-w-7xl mx-auto p-6 mx-3, sm:mx-5, md:md-6 min-h-screen flex flex-col justify-between"
+      className="max-w-7xl mx-auto p-6 mx-3, sm:mx-5, md:md-6 min-h-screen flex flex-col gap-2"
     >
       <div>
         <Carousel
@@ -79,8 +79,9 @@ export default function Home() {
         </Carousel>
       </div>
       <div
-        className="flex flex-col items-center justify-center text-center p-35 space-y-3
-                bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+        className="flex flex-col items-center justify-center text-center 
+                bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 
+                px-4 sm:px-6 md:px-8 py-10 w-full"
       >
         <p className="text-2xl font-semibold mb-2">
           In Loving Memory of Hachalu Hundessa Bonsa
