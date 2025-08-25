@@ -17,7 +17,7 @@ const TrackItem = ({
 }: TrackItemProps) => {
   return (
     <div
-      className="flex items-center justify-between gap-4 p-2 hover:bg-gray-100 rounded-md transition-colors"
+      className="flex items-center justify-between gap-4 p-2 hover:bg-gray-400 rounded-md transition-colors"
       onClick={() => setSelectedVideo(videoId)}
     >
       <span className="font-medium">{trackNumber}</span>
